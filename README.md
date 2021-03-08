@@ -13,8 +13,8 @@ rm ~/.bashrc ~/.profile
 rm ~/.gitconfig
 rm ~/.zaliases ~/.zprofile ~/.zshrc
 rm -rf ~/.config/texstudio
-stow --dotfiles bash git zsh
-stow texstudio
+
+stow --dotfiles bash git zsh texstudio
 ```
 
 [Stow]: https://www.gnu.org/software/stow/
