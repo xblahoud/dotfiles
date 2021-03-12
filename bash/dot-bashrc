@@ -118,3 +118,7 @@ fi
 
 # G alias that uses the default application to open files
 alias o='gio open'
+
+# Enable import from site-packages in Python
+export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python3.8/site-packages
+

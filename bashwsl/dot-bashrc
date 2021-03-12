@@ -116,6 +116,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Enable import from site-packages in Python
+export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python3.8/site-packages
+
 # G alias that uses the default application to open files
 alias o='gio open'
 
