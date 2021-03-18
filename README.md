@@ -1,6 +1,6 @@
 # Dotfiles
 
-My default dotfiles. These include `.bashrc`, `profile`, files for `zsh`, and my configuration for `git` and [TexStudio].
+My default dotfiles. These include `.bashrc`, `profile`, compose-key configuration, files for `zsh`, and my configuration for `git` and [TexStudio].
 
 ## Usage
 
@@ -11,12 +11,13 @@ ones. Note the option `--dotfiles` of `stow`. This translates names like
 `dot-xyz` to `.xyz`.
 
 ```bash
-rm ~/.bashrc ~/.profile
-rm ~/.gitconfig
-rm ~/.zaliases ~/.zprofile ~/.zshrc
+rm -f ~/.bashrc ~/.profile
+rm -f ~/.XCompose
+rm -rf ~/.gitconfig
+rm -f ~/.zaliases ~/.zprofile ~/.zshrc
 rm -rf ~/.config/texstudio
 
-stow --dotfiles bash git zsh texstudio
+stow --dotfiles bash compose-keys git zsh texstudio
 ```
 
 ## WSL (Windows Subsystem for Linux)
@@ -29,7 +30,7 @@ version of `bash` folder to use.
 
 ```bash
 # Run stow
-stow --dotfiles git zsh texstudio
+stow --dotfiles compose-keys git zsh texstudio
 
 if [ $WSL_DISTRO_NAME ]
 then
