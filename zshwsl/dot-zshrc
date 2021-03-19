@@ -108,9 +108,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.zaliases
 
-# Enable import from site-packages in Python
-export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python3.8/site-packages
-
 # xserver output configuration.
 if [ -z "$(pidof gnome-shell)" ]; then
   GATEWAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}')
