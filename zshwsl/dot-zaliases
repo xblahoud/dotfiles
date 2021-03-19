@@ -1,0 +1,9 @@
+alias o='gio open'
+
+# Suffix aliases
+alias -s pdf=evince
+
+# Global aliases
+alias -g G="| grep"
+alias -g L="| less"
+
