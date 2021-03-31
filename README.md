@@ -2,10 +2,18 @@
 
 My default dotfiles. These include `.bashrc`, `profile`, compose-key configuration, files for `zsh`, and my configuration for `git` and [TexStudio].
 
-## Usage
-
+## Requirements
 Requires [Stow] (`sudo apt install stow`)
 
+## Usage
+
+The easiest way is to use the attached Makefile
+
+```sh
+make all
+```
+
+### Without make
 By default, we need to first remove the old dotfiles and then `stow` the new
 ones. Note the option `--dotfiles` of `stow`. This translates names like
 `dot-xyz` to `.xyz`.
@@ -30,13 +38,13 @@ version of `bash` folder to use.
 
 ```bash
 # Run stow
-stow --dotfiles compose-keys git zsh texstudio
+stow --dotfiles compose-keys git texstudio
 
 if [ $WSL_DISTRO_NAME ]
 then
-  stow --dotfiles bashwsl
+  stow --dotfiles bashwsl zshwsl
 else
-  stow --dotfiles bash
+  stow --dotfiles bash zsh
 fi
 ```
 
