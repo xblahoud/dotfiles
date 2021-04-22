@@ -71,3 +71,6 @@
 <Multi_key> <m> <u> : "∪"
 <Multi_key> <m> <&> : "∧"
 <Multi_key> <m> <|> : "∨"
+<Multi_key> <m> <A> : "∀"
+<Multi_key> <m> <E> : "∃"
+<Multi_key> <m> <n> <E> : "∄"
