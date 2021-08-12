@@ -25,7 +25,7 @@ texstudio: ~/.config/texstudio
 
 ~/.XCompose: compose-keys/dot-XCompose
 	rm -f ~/.XCompose
-	stow --dotfiles copose-keys
+	stow --dotfiles compose-keys
 
 ~/.config/texstudio: texstudio/.config/texstudio/
 	rm -rf ~/.config/texstudio
