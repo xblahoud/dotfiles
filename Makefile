@@ -9,8 +9,9 @@ endif
 
 all: bash compose-keys git texstudio zsh
 
-zsh: ~/.zshrc
-bash: ~/.bashrc
+zsh: ~/.zshrc paths
+bash: ~/.bashrc paths
+paths: ~/.paths-settings
 compose-keys: ~/.XCompose
 git: ~/.gitconfig
 texstudio: ~/.config/texstudio
@@ -22,6 +23,10 @@ texstudio: ~/.config/texstudio
 ~/.bashrc: $(bashdir)/dot-bashrc $(bashdir)/dot-profile
 	rm -f ~/.bashrc ~/.profile
 	stow --dotfiles $(bashdir)
+
+~/.paths-settings: path/dot-paths-settings
+	rm -f ~/.paths-settings
+	stow --dotfiles path
 
 ~/.XCompose: compose-keys/dot-XCompose
 	rm -f ~/.XCompose

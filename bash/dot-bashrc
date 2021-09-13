@@ -122,3 +122,4 @@ alias o='gio open'
 # Enable import from site-packages in Python
 export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python3.8/site-packages
 
+source ~/.paths-settings

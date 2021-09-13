@@ -110,3 +110,4 @@ source ~/.zaliases
 autoload -U compinit
 compinit -i
 
+source .paths-settings

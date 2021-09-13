@@ -1,0 +1,2 @@
+# Add phtest to PATH
+export PATH=$PATH:/u/fblahoudek/tools/phtest/phtest
