@@ -7,3 +7,11 @@ alias -s pdf=evince
 alias -g G="| grep"
 alias -g L="| less"
 
+# Custom commands
+alias devpurity='ssh -t -X dev "cd $PURITY_DIR && zsh --login"'
+
+# Screen configs
+alias at-home='autorandr work && xrandr --output eDP-1 --noprimary'
+alias at-work='autorandr work-rotated && xrandr --output eDP-1 --noprimary'
+# alias fuse='purelogin && ssh -X fuse'
+

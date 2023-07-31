@@ -69,7 +69,9 @@ ZSH_THEME="spaceship"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  copybuffer
   git
+  poetry
   zsh-syntax-highlighting
   zsh-autosuggestions
   colored-man-pages
@@ -107,6 +109,15 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.zaliases
-autoload -U compinit
+
+# Needed for poetry completion
+fpath+=~/.zfunc
+
+autoload -Uz compinit
 compinit -i
 
+export PURITY_DIR=/local/purity
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
