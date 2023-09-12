@@ -7,3 +7,5 @@ alias -s pdf=evince
 alias -g G="| grep"
 alias -g L="| less"
 
+alias glog='git g'
+

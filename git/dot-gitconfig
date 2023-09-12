@@ -17,3 +17,18 @@
 [mergetool]
 	prompt = false
 
+[reviewboard]
+	url = https://codereviews.purestorage.com
+
+[rebase]
+	autoSquash = true
+
+[alias]
+        l = log --decorate --pretty=format:"%C(yellow)%h\\ %Cred%cd\\ %<(12,trunc)%cl\\ %Cblue%ad\\ %<(12,trunc)%al\\ %Creset%s\\ %Cgreen%d%Creset" --color=always --date=short
+        g = l --graph --branches
+        csv = log --pretty=format:"%h,%cd,%cl,%ad,%al,%s" --date=short
+        st = status
+        cm = commit
+        co = checkout
+        rbi = rebase --interactive --autosquash
+        fix = "!f() { vim `git diff --name-only`; }; f"
