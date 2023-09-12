@@ -110,5 +110,8 @@ source ~/.zaliases
 autoload -U compinit
 compinit -i
 
-source .paths-settings
-source .tlog.zsh
+source $HOME/.paths-settings
+source $HOME/.tlog.zsh
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
